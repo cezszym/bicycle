@@ -4,10 +4,13 @@ class BikeList extends React.Component {
   render() {
     return (
       <div>
-        <h2>lista</h2>
+        <h2>Lista rowerów</h2>
         <ul>
           {this.props.list.map((e, index) => (
-            <li key={index}>{e.name}</li>
+            <li key={index} className="rower">
+              <h3> {e.name ? e.name : 'no name'}</h3>
+              <p>{e.description ? e.description : 'no desc'}</p>
+            </li>
           ))}
         </ul>
       </div>
